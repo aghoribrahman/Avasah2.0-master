@@ -1,5 +1,6 @@
 {% extends "nav-bar.html" %}
 {% load static %}
+
 {% block content %}
             <!-- Page Header Start -->
             <div class="page-header pt-4 pb-4">
@@ -28,19 +29,29 @@
                             
                             <div class="blog-item">
                                 <div class="blog-img">
-                                    <a class="btn" href="{% url 'single' property_infos.id %}"> <img src="{{ images.image.url }}" alt="image" class="zoomable"> </a>
+                                    <a class="btn" href="{% url 'single' property_infos.id %}"> 
+                                    {% for image in first_image %}
+                                        
+                                        {% if property_infos.property_name == image.image_name.property_name %}
+                                        <img src="{{ image.image.url }}" alt="image" class="zoomable"> 
+                                        {% endif %}
+                                        
+                                    {% endfor %}
+                                    </a>
                                 </div>
                                 <div class="blog-title">
-                                    <h3>{{ property_infos.property_name }}</h3>
+                                    <h3>{{ property_infos.property_name }} {{ num_objects }}</h3>
                                     <a class="btn" href="{% url 'single' property_infos.id %}">+</a>
                                 </div>
                                 <div class="blog-meta">
                                     <p>By<a href="">Admin</a></p>
                                     <p>In<a href="">Construction</a></p>
                                 </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor
+                                <div class="blog-text ">
+                                    <p class="text-secondary">
+                                        Property Timeline - {{property_infos.property_timeline}}
+                                        Property Status - {{property_infos.status}}
+                                        Rera Number - {{property_infos.rera_number}}
                                     </p>
                                 </div>
                             </div>

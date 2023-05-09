@@ -53,13 +53,13 @@
                         </div>
                         <div class="col-md-6 ">
                             <div class="contact-info">
-                                <div id="success" class='text-center text-bold'>
+                                <div id="success" class='text-center text-bold text-secondary'>
                                   {{message}}
                                 </div>
                                 <form method="post" name="sentMessage" id="contactForm">
                                     {% csrf_token %} 
                                     {% for fields in form %}
-                                        <div class='ml-5 mt-2'>{{ fields.label_tag }}</div> <div>{{ fields }}</div>
+                                        <div class='ml-5 mt-2 text-secondary '>{{ fields.label_tag }}</div> <div>{{ fields }}</div>
                                     {% endfor %} 
                                     <br>
                                     <div>
