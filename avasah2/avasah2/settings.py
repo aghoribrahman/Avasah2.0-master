@@ -27,10 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_ynogg6ubda8)i(&_52@y5!9z%(8ty$cnf%*tk^+c)b=y&@5mm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
-
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -88,7 +88,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-
+#postgresql://postgres:[Tr7662230066_wcdr]@db.prbhestzyrinxscqzntp.supabase.co:5432/postgres
 DATABASES['default'] = dj_database_url.config()
 
 
@@ -134,3 +134,5 @@ STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
