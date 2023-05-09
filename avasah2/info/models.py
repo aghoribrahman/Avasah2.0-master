@@ -10,6 +10,7 @@ class Query_model(models.Model):
     budget = models.IntegerField()
     other_info = models.TextField(max_length=300,default='None')
     reference = models.CharField(max_length=100,default='None')
+    
 
     class Meta:
         verbose_name_plural = 'Customer Query'

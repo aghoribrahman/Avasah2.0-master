@@ -13,12 +13,15 @@ def about(request):
 
 def blog(request,id):
     property_category = Property_Category.objects.get(id=id)
-    property_info = property_infomation.objects.filter(category__type_of_property = property_category.type_of_property)
-    for i in property_info:
-        value=i
-        break
-    images = Image.objects.filter(image_name__property_name = value).first()
-    return render (request,'blogs.html',{"images":images,"property_info":property_info})
+    property_info = property_infomation.objects.filter(category__type_of_property = property_category.type_of_property).order_by('-id')
+    images = Image.objects.all().order_by('-id')
+    first_image= []
+    for prop in property_info:
+        imag = Image.objects.filter(image_name__property_name = prop.property_name).first()
+        first_image.append(imag)
+
+    num_objects = len(property_info)+1
+    return render (request,'blogs.html',{"images":images,"property_info":property_info,"first_image":first_image, "num_objects":num_objects})
 
 def contact(request):
     message = 'Please Fill The Infomartion Here'
@@ -41,7 +44,10 @@ def service(request):
 
 def single(request,id):
     property_info = property_infomation.objects.filter(id=id)
-    images = Image.objects.all()
+    for i in property_info:
+        value=i
+        break
+    images = Image.objects.filter(image_name__property_name = value)
     return render (request,'singles.html',{"property_info":property_info,"images":images})
 
 def team(request):

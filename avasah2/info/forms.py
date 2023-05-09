@@ -3,8 +3,11 @@ from .models import Query_model, Contact_model
 
 
 class Query_form(forms.ModelForm):
+
+    
     
     class Meta:
+        
        
         model = Query_model 
 
@@ -18,6 +21,7 @@ class Query_form(forms.ModelForm):
             'area' : forms.TextInput(attrs={'class' : 'form-control row w-50 p-3 mx-5'}),
             'budget' : forms. NumberInput(attrs={'class' : 'form-control row w-50 p-3 mx-5'}),
             'other_info' : forms.TextInput(attrs={'class' : 'form-control row w-50 p-3 mx-5'}),
+            'reference' : forms.TextInput(attrs={'class' : 'form-control row w-50 p-3 mx-5'}),        
             }
 
 
