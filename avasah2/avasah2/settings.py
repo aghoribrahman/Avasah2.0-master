@@ -29,8 +29,8 @@ SECRET_KEY = 'django-insecure-_ynogg6ubda8)i(&_52@y5!9z%(8ty$cnf%*tk^+c)b=y&@5mm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -89,7 +89,7 @@ DATABASES = {
     }
 }
 #postgresql://postgres:[Tr7662230066_wcdr]@db.prbhestzyrinxscqzntp.supabase.co:5432/postgres
-DATABASES['default'] = dj_database_url.config()
+#DATABASES['default'] = dj_database_url.config()
 
 
 

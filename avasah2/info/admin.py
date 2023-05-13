@@ -11,7 +11,7 @@ class Contact_model_admin(admin.ModelAdmin):
 
 @admin.register(property_infomation)
 class property_infomations_admin(admin.ModelAdmin):
-    list_display =["id","category","property_name","property_timeline","property_type","status","rera_number","property_detail",]
+    list_display =["id","category","property_name","property_timeline","property_type","status","rera_number","property_detail","youtube_link"]
 
 @admin.register(Image)
 class property_infomations_admin(admin.ModelAdmin):
