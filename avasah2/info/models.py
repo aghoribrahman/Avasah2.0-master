@@ -42,6 +42,7 @@ class property_infomation(models.Model):
     rera_number = models.CharField(max_length=100)
     property_detail = models.TextField()
     youtube_link = models.CharField(max_length=200)
+    amenities = models.CharField(max_length=200)
     def __str__(self) -> str:
         return self.property_name
 

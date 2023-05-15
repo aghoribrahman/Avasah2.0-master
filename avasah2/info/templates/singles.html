@@ -37,11 +37,13 @@
     <h5 class="font-weight-bold mb-3 mt-3">Property Type </h5><span class="text-white">{{property.property_type}}</span>  <br>
     <h5 class="font-weight-bold mb-3 mt-3">Property Status </h5><span class="text-white">{{property.status}}</span>  <br>
     <h5 class="font-weight-bold mb-3 mt-3">Rera Number </h5><span class="text-white mb">{{property.rera_number}}</span>  <br>
+    <h5 class="font-weight-bold mb-3 mt-3">Amenities </h5><span class="text-white mb">{{property.amenities}}</span>  <br>
     
     
     
     <div class="card text-center bg-transparent border-0">
         <div class="card-body">
+            <h5 class="font-weight-bold mb-3 mt-3">Descriptions</h5>
           <p class="card-text text-white">{{property.property_detail}}</p>
         </div>
     </div>
@@ -53,14 +55,15 @@
     {% endfor %}
 </div>
 
+
 <div class="container">
     <div class="row">
         {% for property in property_info %}
             {% for image in images %}
                 {% if property.property_name == image.image_name.property_name %}
                 <div class='col-md-3' style="padding-top:30px;">
-                    <div class="card" style="">   
-                        <img src="{{ image.image.url }}" alt="image" class="zoomable card-img-top" alt="Category Title">                      
+                    <div class="card " style="">   
+                        <img src="{{ image.image.url }}" alt="image" class="zoomable card-img-top " alt="Category Title">                      
                     </div>
                 </div>
                 {% endif %}
