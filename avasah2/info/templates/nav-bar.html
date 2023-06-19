@@ -29,12 +29,12 @@
             <!-- Nav Bar Start -->
             <div class="nav-bar">
                 <div class="container-fluid p-3">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark mr-3">
-                       
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark mr-3 ">
+                        <a href="{% url "index" %}"><img class='ml-3 p-2 ' src="/static/img/BrickBix.png" width="130" height="70" alt="Carousel Image"></a>
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <a href="{% url "index" %}"><img class='ml-3 p-2' src="/static/img/BrickBix.png" width="130" height="70" alt="Carousel Image"></a>
+                        
                         <div class="collapse navbar-collapse justify-content-between ml-3" id="navbarCollapse">
                                 <a href="{% url 'index' %}" class="nav-item nav-link font-weight-bold">Home</a>
                                 <a href="{% url 'about' %}" class="nav-item nav-link active font-weight-bold">About</a>
