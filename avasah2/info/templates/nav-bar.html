@@ -35,13 +35,13 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         
-                        <div class="collapse navbar-collapse justify-content-between ml-3" id="navbarCollapse">
-                                <a href="{% url 'index' %}" class="nav-item nav-link font-weight-bold">Home</a>
-                                <a href="{% url 'about' %}" class="nav-item nav-link active font-weight-bold">About</a>
-                                <a href="{% url 'service' %}" class="nav-item nav-link font-weight-bold">Service</a>
-                                <a href="{% url 'contact' %}" class="nav-item nav-link font-weight-bold">Contact</a>
+                        <div class="collapse navbar-collapse justify-content-between ml-3 " id="navbarCollapse">
+                                <a href="{% url 'index' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-end">Home</a>
+                                <a href="{% url 'about' %}" class="nav-item nav-link active font-weight-bold d-flex justify-content-end">About</a>
+                                <a href="{% url 'service' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-end">Service</a>
+                                <a href="{% url 'contact' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-end">Contact</a>
                             <div class="ml-auto">
-                                <a class="font-weight-bold" href="{% url 'query' %}" >Query Here</a>
+                                <a class="font-weight-bold d-flex justify-content-end" href="{% url 'query' %}" >Query Here</a>
                             </div>
                         </div>
                     </nav>
