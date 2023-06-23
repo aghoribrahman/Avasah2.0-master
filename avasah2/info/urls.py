@@ -14,6 +14,7 @@ urlpatterns = [
     path('service/',views.service, name='service'), 
     path('single/<int:id>',views.single, name='single'),
     path('team/',views.team, name='team'), 
+    path('PropertyTable/',views.PropertyTable, name='PropertyTable'), 
     path('query/',views.query, name='query'), 
 ]
 

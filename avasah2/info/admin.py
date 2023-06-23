@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Query_model, Contact_model, property_infomation, Image,Property_Category
+from .models import Query_model, Contact_model, property_infomation, Image,Property_Category,Property_Table
 
 @admin.register(Query_model)
 class Query_model_admin(admin.ModelAdmin):
@@ -20,3 +20,7 @@ class property_infomations_admin(admin.ModelAdmin):
 @admin.register(Property_Category)
 class property_infomations_admin(admin.ModelAdmin):
     list_display =["id","type_of_property"]
+
+@admin.register(Property_Table)
+class Property_Table_admin(admin.ModelAdmin):
+    list_display =["Area","Property_Type","Property_Size","Rate"]

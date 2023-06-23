@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Query_model, Image, property_infomation,Property_Category
+from .models import Query_model, Image, property_infomation,Property_Category,Property_Table
 from .forms import Query_form , Contact_form
 from django.contrib import messages
 # Create your views here.
@@ -7,6 +7,10 @@ from django.contrib import messages
 
 def index(request):
     return render (request,'index.html')
+
+def PropertyTable(request):
+    property_table = Property_Table.objects.all()
+    return render (request,'PropertyTable.html',{"property_table":property_table})
 
 def about(request):
     return render (request,'about.html')

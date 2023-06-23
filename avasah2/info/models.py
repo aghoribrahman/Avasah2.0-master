@@ -49,4 +49,13 @@ class property_infomation(models.Model):
 class Image(models.Model):
     image_name = models.ForeignKey(property_infomation,on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images/')
+
+class Property_Table(models.Model):  
+    Area = models.CharField(max_length=100)  
+    Property_Type  = models.CharField(max_length=100)
+    Property_Size = models.CharField(max_length=100)  
+    Rate = models.CharField(max_length=100)
+
+    def __str__(self) -> str:
+        return self.Area
     
