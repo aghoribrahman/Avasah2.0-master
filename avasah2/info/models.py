@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.utils import timezone
 
 class Query_model(models.Model):  
     full_name = models.CharField(max_length=50)  
@@ -10,6 +10,7 @@ class Query_model(models.Model):
     budget = models.IntegerField()
     other_info = models.TextField(max_length=300,default='None')
     reference = models.CharField(max_length=100,default='None')
+    created_at = models.DateTimeField(auto_now_add=True)
     
 
     class Meta:
@@ -20,6 +21,7 @@ class Contact_model(models.Model):
     phone_number  = models.CharField(max_length=13)
     email_id = models.EmailField()
     other_info = models.TextField(max_length=300,default='None')
+    created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name_plural = 'Contacts Data'

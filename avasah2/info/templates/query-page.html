@@ -11,23 +11,25 @@
         </div>
     </div>
     <div class='row'>
-        <dir class='col-sm-3'>
-            <h3 class='font-weight-bold fade-in ml-5'>Query</h3> <br>
-            <div id="success" class=' ml-5 text-justify font-weight-bold'>
-                <p>{{message}}</p>
-            </div>
+        <dir class='col-lg-3 col-sm-12'>
+            <h3 class='font-weight-bold fade-in ml-5 justify-content-center'>Query</h3> <br>
+            
             <p class='text-white font-weight-bold ml-5'> Please fill the information</p><p class='text-left text-white font-weight-bold ml-5'> here</p> <p class='text-left text-white font-weight-bold ml-5'>our patners will contact you</p> <p class='text-left text-white font-weight-bold ml-5'>Soon </p>
         </dir>
-        <div class='col-sm-8 mr-2'>
+        <div class='col-lg-8 col-sm-12'>
+            <div id="success" class=' ml-5 text-justify font-weight-bold text-success'>
+                <p>{{message}}</p>
+            </div>
             <form method="post" name="sentMessage" id="contactForm">
                 {% csrf_token %}  
                 {% for fields in form %}
-                    <div class='ml-5 mt-2 text-white '>{{ fields.label_tag }}</div>{{ fields }}
+                    <div class='ml-5 mt-2 ml-0 text-white '>{{ fields.label_tag }}</div>{{ fields }}
                 {% endfor %} 
                 <br>
                 <div>
                     <button class="btn btn-outline-success ml-5" type="submit" id="sendMessageButton">Send Message</button>
                 </div>
+                
             </form>
         </div>  
         

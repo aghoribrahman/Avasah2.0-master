@@ -9,7 +9,7 @@
         <meta content="Construction Company Website Template" name="description">
 
         <!-- Favicon -->
-        <link href="/static/img/BrickBix.png" rel="icon">
+        <link href="/static/img/Brick_Bix.png" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -28,20 +28,20 @@
     </head>
             <!-- Nav Bar Start -->
             <div class="nav-bar">
-                <div class="container-fluid p-3">
+                <div class="container-fluid">
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark mr-3 ">
-                        <a href="{% url "index" %}"><img class='ml-3 p-2 ' src="/static/img/BrickBix.png" width="130" height="70" alt="Carousel Image"></a>
+                        <a href="{% url "index" %}"><img class='ml-3 p-2 ' src="/static/img/Brick_Bix.png" width="130" height="100" alt="Carousel Image"></a>
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         
                         <div class="collapse navbar-collapse justify-content-between ml-3 " id="navbarCollapse">
-                                <a href="{% url 'index' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-end">Home</a>
-                                <a href="{% url 'about' %}" class="nav-item nav-link active font-weight-bold d-flex justify-content-end">About</a>
-                                <a href="{% url 'service' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-end">Service</a>
-                                <a href="{% url 'contact' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-end">Contact</a>
+                                <a href="{% url 'index' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-center">Home</a>
+                                <a href="{% url 'about' %}" class="nav-item nav-link active font-weight-bold d-flex justify-content-center">About</a>
+                                <a href="{% url 'service' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-center">Service</a>
+                                <a href="{% url 'contact' %}" class="nav-item nav-link font-weight-bold d-flex justify-content-center">Contact</a>
                             <div class="ml-auto">
-                                <a class="font-weight-bold d-flex justify-content-end" href="{% url 'query' %}" >Query Here</a>
+                                <a class="font-weight-bold d-flex justify-content-center" href="{% url 'query' %}" >Query Here</a>
                             </div>
                         </div>
                     </nav>
@@ -59,7 +59,7 @@
                                 <h2>Office Contact</h2>
                                 <p><i class="fa fa-map-marker-alt"></i>Vijay Nagar</p>
                                 <p><i class="fa fa-phone-alt"></i>+91-8770084705</p>
-                                <p><i class="fa fa-envelope"></i>BrickBixinfo@gmail.com</p>
+                                <p><i class="fa fa-envelope"></i>info@brickbix.com</p>
                                 <div class="footer-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href="https://www.facebook.com/profile.php?id=100091651563978&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
@@ -77,7 +77,7 @@
                                 <a href="">Agriculture Property</a>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-3 ml-5">
+                       <!-- <div class="col-md-6 col-lg-3 ml-5">
                             <div class="footer-link">
                                 <h2>Useful Pages</h2>
                                 <a href="{% url 'about' %}">About Us</a>
@@ -85,7 +85,7 @@
                                 <a href= {% url 'team' %}>Our Team</a>
                                 <a href="">Testimonial</a>
                             </div>
-                        </div>
+                        </div> -->
                         <!--<div class="col-md-6 col-lg-3">
                             <div class="newsletter">
                                 <h2>Newsletter</h2>

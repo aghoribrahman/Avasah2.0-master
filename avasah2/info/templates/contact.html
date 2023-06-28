@@ -46,20 +46,22 @@
                                     <i class="flaticon-send-mail"></i>
                                     <div class="contact-text">
                                         <h2>Email</h2>
-                                        <p>BrickBixinfo@gmail.com</p>
+                                        <p>info@brickbix.co</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 ">
                             <div class="contact-info">
-                                <div id="success" class='text-center text-bold text-secondary'>
+                                <div id="success" class='text-center text-bold text-success'>
                                   {{message}}
                                 </div>
                                 <form method="post" name="sentMessage" id="contactForm">
                                     {% csrf_token %} 
                                     {% for fields in form %}
-                                        <div class='ml-5 mt-2 text-secondary '>{{ fields.label_tag }}</div> <div>{{ fields }}</div>
+                                    {% if forloop.counter <= 4 %}
+                                        <div class='ml-5 mt-2 text-secondary '>{{ fields.label_tag }} {{loop.index}}</div> <div>{{ fields }}</div>  
+                                    {% endif %}                                        
                                     {% endfor %} 
                                     <br>
                                     <div>

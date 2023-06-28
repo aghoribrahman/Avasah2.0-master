@@ -1,6 +1,7 @@
 {% extends "nav-bar.html" %}
 {% load static %}
 {% block content %}
+<div class='mb-4 pb-4'>  
 <table class="table table-striped">
     <thead>
       <tr>
@@ -10,15 +11,16 @@
         <th class="text-white" scope="col">Rate per sqft</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class=''>
       {% for info in property_table %}
-      <tr>
-        <th scope="row">{{info.Area}}</th>
-        <td>{{info.Area}}</td>
-        <td>{{info.Area}}</td>
-        <td>{{info.Area}}</td>
+      <tr >
+        <th class="text-white"scope="row">{{info.Area}}</th>
+        <td class="text-white">{{info.Property_Type}}</td>
+        <td class="text-white">{{info.Property_Size}}</td>
+        <td class="text-white">{{info.Rate}}/sqft</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
+</div>
 {% endblock content %}
