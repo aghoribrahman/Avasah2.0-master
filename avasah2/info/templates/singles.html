@@ -61,8 +61,8 @@
         {% for property in property_info %}
             {% for image in images %}
                 {% if property.property_name == image.image_name.property_name %}
-                <div class='col-md-3' style="padding-top:30px;">
-                    <div class="card " style="">   
+                <div class='col-3' style="margin-top:20px;">
+                    <div class="card" style="">   
                         <img src="{{ image.image.url }}" alt="image" class="zoomable card-img-top " alt="Category Title">                      
                     </div>
                 </div>
