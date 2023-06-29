@@ -96,7 +96,7 @@ DATABASES = {
         'PORT': '5432',
     }
 }
-#postgresql://postgres:[Tr7662230066_wcdr]@db.prbhestzyrinxscqzntp.supabase.co:5432/postgres
+
 DATABASES['default'] = dj_database_url.config()
 
 
